@@ -1,0 +1,13 @@
+D:\Repositories\Debug\Debug\bin\Release\net472\Debug.dll
+D:\Repositories\Debug\Debug\bin\Release\net472\Debug.pdb
+D:\Repositories\Debug\Debug\bin\Release\net472\Debug.xml
+D:\Repositories\Debug\Debug\bin\Release\net472\UnityEngine.dll
+D:\Repositories\Debug\Debug\bin\Release\net472\UnityEngine.xml
+D:\Repositories\Debug\Debug\obj\Release\net472\Debug.csproj.AssemblyReference.cache
+D:\Repositories\Debug\Debug\obj\Release\net472\Debug.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositories\Debug\Debug\obj\Release\net472\Debug.AssemblyInfoInputs.cache
+D:\Repositories\Debug\Debug\obj\Release\net472\Debug.AssemblyInfo.cs
+D:\Repositories\Debug\Debug\obj\Release\net472\Debug.csproj.CoreCompileInputs.cache
+D:\Repositories\Debug\Debug\obj\Release\net472\Debug.csproj.CopyComplete
+D:\Repositories\Debug\Debug\obj\Release\net472\Debug.dll
+D:\Repositories\Debug\Debug\obj\Release\net472\Debug.pdb

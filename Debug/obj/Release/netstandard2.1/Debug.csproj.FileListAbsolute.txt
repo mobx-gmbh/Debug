@@ -1,0 +1,14 @@
+D:\Repositories\Debug\Debug\bin\Release\netstandard2.1\Debug.xml
+D:\Repositories\Debug\Debug\bin\Release\netstandard2.1\UnityEngine.dll
+D:\Repositories\Debug\Debug\bin\Release\netstandard2.1\UnityEngine.xml
+D:\Repositories\Debug\Debug\obj\Release\netstandard2.1\Debug.csproj.AssemblyReference.cache
+D:\Repositories\Debug\Debug\obj\Release\netstandard2.1\Debug.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositories\Debug\Debug\obj\Release\netstandard2.1\Debug.AssemblyInfoInputs.cache
+D:\Repositories\Debug\Debug\obj\Release\netstandard2.1\Debug.AssemblyInfo.cs
+D:\Repositories\Debug\Debug\obj\Release\netstandard2.1\Debug.csproj.CoreCompileInputs.cache
+D:\Repositories\Debug\Debug\obj\Release\netstandard2.1\Debug.csproj.CopyComplete
+D:\Repositories\Debug\Debug\bin\Release\netstandard2.1\com.baracuda.debug.deps.json
+D:\Repositories\Debug\Debug\bin\Release\netstandard2.1\com.baracuda.debug.dll
+D:\Repositories\Debug\Debug\bin\Release\netstandard2.1\com.baracuda.debug.pdb
+D:\Repositories\Debug\Debug\obj\Release\netstandard2.1\com.baracuda.debug.dll
+D:\Repositories\Debug\Debug\obj\Release\netstandard2.1\com.baracuda.debug.pdb

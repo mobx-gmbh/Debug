@@ -1,0 +1,16 @@
+D:\Repositories\Debug\Debug\bin\Release\net5.0\Debug.deps.json
+D:\Repositories\Debug\Debug\bin\Release\net5.0\Debug.dll
+D:\Repositories\Debug\Debug\bin\Release\net5.0\Debug.pdb
+D:\Repositories\Debug\Debug\bin\Release\net5.0\Debug.xml
+D:\Repositories\Debug\Debug\bin\Release\net5.0\UnityEngine.dll
+D:\Repositories\Debug\Debug\bin\Release\net5.0\UnityEngine.xml
+D:\Repositories\Debug\Debug\obj\Release\net5.0\Debug.csproj.AssemblyReference.cache
+D:\Repositories\Debug\Debug\obj\Release\net5.0\Debug.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositories\Debug\Debug\obj\Release\net5.0\Debug.AssemblyInfoInputs.cache
+D:\Repositories\Debug\Debug\obj\Release\net5.0\Debug.AssemblyInfo.cs
+D:\Repositories\Debug\Debug\obj\Release\net5.0\Debug.csproj.CoreCompileInputs.cache
+D:\Repositories\Debug\Debug\obj\Release\net5.0\Debug.csproj.CopyComplete
+D:\Repositories\Debug\Debug\obj\Release\net5.0\Debug.dll
+D:\Repositories\Debug\Debug\obj\Release\net5.0\refint\Debug.dll
+D:\Repositories\Debug\Debug\obj\Release\net5.0\Debug.pdb
+D:\Repositories\Debug\Debug\obj\Release\net5.0\ref\Debug.dll
