@@ -14,7 +14,6 @@ namespace MobX
         /// <param name="exception">Runtime Exception.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_EXCEPTION")]
         public static void LogException(Exception exception, Object context = null)
         {
             UnityEngine.Debug.LogException(exception, context);
@@ -28,7 +27,6 @@ namespace MobX
         /// <param name="exception">Runtime Exception.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_EXCEPTION")]
         public static void LogException(LogCategory category, Exception exception, Object context = null)
         {
             UnityEngine.Debug.LogException(exception, context);

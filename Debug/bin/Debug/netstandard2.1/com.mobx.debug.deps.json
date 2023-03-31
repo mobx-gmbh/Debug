@@ -7,12 +7,12 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "com.baracuda.debug/1.0.0": {
+      "com.mobx.debug/1.0.0": {
         "dependencies": {
           "UnityEngine": "0.0.0.0"
         },
         "runtime": {
-          "com.baracuda.debug.dll": {}
+          "com.mobx.debug.dll": {}
         }
       },
       "UnityEngine/0.0.0.0": {
@@ -26,7 +26,7 @@
     }
   },
   "libraries": {
-    "com.baracuda.debug/1.0.0": {
+    "com.mobx.debug/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

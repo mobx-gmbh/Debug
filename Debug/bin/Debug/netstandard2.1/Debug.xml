@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>com.baracuda.debug</name>
+        <name>com.mobx.debug</name>
     </assembly>
     <members>
         <member name="T:MobX.Debug">
@@ -118,6 +118,11 @@
         <member name="P:MobX.Debug.isDebugBuild">
             <summary>
               <para>In the Build Settings dialog there is a check box called "Development Build".</para>
+            </summary>
+        </member>
+        <member name="M:MobX.Debug.#cctor">
+            <summary>
+            Static ctor
             </summary>
         </member>
         <member name="M:MobX.Debug.DrawLine(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Color,System.Single)">
@@ -1016,7 +1021,7 @@
             Get or set the active log filtering method.
             </summary>
         </member>
-        <member name="F:MobX.Debug.SEPARATOR">
+        <member name="F:MobX.Debug.Separator">
             <summary>
             Default collection item separation character.
             </summary>
@@ -1054,6 +1059,16 @@
         <member name="M:MobX.Debug.CreateLogCategoryMessageNoAlloc(MobX.LogCategory,System.String)">
             <summary>
             Combines two strings with minimal allocation.
+            </summary>
+        </member>
+        <member name="M:MobX.Debug.LoadEditorData">
+            <summary>
+            Load blocked and unblocked data.
+            </summary>
+        </member>
+        <member name="M:MobX.Debug.SaveEditorData">
+            <summary>
+            Save blocked and unblocked data.
             </summary>
         </member>
         <member name="T:MobX.DebugExtensions">

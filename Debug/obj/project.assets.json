@@ -15,7 +15,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "E:\\Repositories\\Debug\\Debug\\Debug.csproj",
-      "projectName": "com.baracuda.debug",
+      "projectName": "com.mobx.debug",
       "projectPath": "E:\\Repositories\\Debug\\Debug\\Debug.csproj",
       "packagesPath": "C:\\Users\\Jonathan-Desktop\\.nuget\\packages\\",
       "outputPath": "E:\\Repositories\\Debug\\Debug\\obj\\",

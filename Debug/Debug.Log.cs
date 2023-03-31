@@ -17,7 +17,7 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
+        [Conditional("DEBUG")]
         public static void Log(string message, Object context = null)
         {
             LogMessageInternal(message, context);
@@ -30,7 +30,7 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
+        [Conditional("DEBUG")]
         public static void Log(object message, Object context = null)
         {
             LogMessageInternal(message, context);
@@ -43,7 +43,7 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
+        [Conditional("DEBUG")]
         public static void Log<T>(T message, Object context = null) where T : struct
         {
             LogMessageInternal(message, context);
@@ -59,7 +59,7 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
+        [Conditional("DEBUG")]
         public static void Log(string message, LogOption logOption, Object context = null)
         {
             LogFormatInternal(LogType.Log, logOption, message, null, context);
@@ -73,7 +73,7 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
+        [Conditional("DEBUG")]
         public static void Log(object message, LogOption logOption, Object context = null)
         {
             LogFormatInternal(LogType.Log, logOption, message, null, context);
@@ -87,7 +87,7 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
+        [Conditional("DEBUG")]
         public static void Log<T>(T message, LogOption logOption, Object context = null) where T : struct
         {
             LogFormatInternal(LogType.Log, logOption, message, null, context);
@@ -109,8 +109,8 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
-        public static void Log<T>(ICollection<T> collection, string separator = SEPARATOR, Object context = null)
+        [Conditional("DEBUG")]
+        public static void Log<T>(ICollection<T> collection, string separator = Separator, Object context = null)
         {
             LogFormatInternal(LogType.Log, LogOption.None, collection, separator, context);
         }
@@ -122,10 +122,10 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
+        [Conditional("DEBUG")]
         public static void Log<T>(ICollection<T> collection, Object context)
         {
-            LogFormatInternal(LogType.Log, LogOption.None, collection, SEPARATOR, context);
+            LogFormatInternal(LogType.Log, LogOption.None, collection, Separator, context);
         }
 
         /// <summary>
@@ -137,8 +137,8 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
-        public static void Log<T>(ICollection<T> collection, LogOption logOption, string separator = SEPARATOR,
+        [Conditional("DEBUG")]
+        public static void Log<T>(ICollection<T> collection, LogOption logOption, string separator = Separator,
             Object context = null)
         {
             LogFormatInternal(LogType.Log, logOption, collection, separator, null);
@@ -152,10 +152,10 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
+        [Conditional("DEBUG")]
         public static void Log<T>(ICollection<T> collection, LogOption logOption, Object context)
         {
-            LogFormatInternal(LogType.Log, logOption, collection, SEPARATOR, context);
+            LogFormatInternal(LogType.Log, logOption, collection, Separator, context);
         }
 
         #endregion
@@ -173,7 +173,7 @@ namespace MobX
         /// <param name="args">Format arguments.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
+        [Conditional("DEBUG")]
         public static void LogFormat(string format, params object[] args)
         {
             LogFormatInternal(LogType.Log, LogOption.None, format, args, null);
@@ -187,7 +187,7 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
+        [Conditional("DEBUG")]
         public static void LogFormat(Object context, string format, params object[] args)
         {
             LogFormatInternal(LogType.Log, LogOption.None, format, args, context);
@@ -203,7 +203,7 @@ namespace MobX
         /// <param name="logOptions">Option flags to treat the log message special.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_MESSAGE")]
+        [Conditional("DEBUG")]
         public static void LogFormat(LogType logType, LogOption logOptions, Object context, string format,
             params object[] args)
         {

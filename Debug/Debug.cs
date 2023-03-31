@@ -75,5 +75,13 @@ namespace MobX
         [PublicAPI]
         [DebuggerHidden]
         public static bool isDebugBuild => UnityEngine.Debug.isDebugBuild;
+
+        /// <summary>
+        /// Static ctor
+        /// </summary>
+        static Debug()
+        {
+            LoadEditorData();
+        }
     }
 }

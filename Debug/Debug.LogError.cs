@@ -14,7 +14,6 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
         public static void LogError(string error, Object context = null)
         {
             LogErrorInternal(error, context);
@@ -27,7 +26,6 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
         public static void LogError(object error, Object context = null)
         {
             LogErrorInternal(error.ToString(), context);
@@ -40,7 +38,6 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
         public static void LogError<T>(T error, Object context = null) where T : struct
         {
             LogErrorInternal(error.ToString(), context);
@@ -56,7 +53,6 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
         public static void LogError(string error, LogOption logOption, Object context = null)
         {
             LogFormatInternal(LogType.Error, logOption, error, null, context);
@@ -70,7 +66,6 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
         public static void LogError(object error, LogOption logOption, Object context = null)
         {
             LogFormatInternal(LogType.Error, logOption, error, null, context);
@@ -84,7 +79,6 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
         public static void LogError<T>(T error, LogOption logOption, Object context = null) where T : struct
         {
             LogFormatInternal(LogType.Error, logOption, error, null, context);
@@ -100,8 +94,7 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
-        public static void LogError<T>(IEnumerable<T> collection, string separator = SEPARATOR, Object context = null)
+        public static void LogError<T>(IEnumerable<T> collection, string separator = Separator, Object context = null)
         {
             LogFormatInternal(LogType.Error, LogOption.None, collection, separator, context);
         }
@@ -113,10 +106,9 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
         public static void LogError<T>(IEnumerable<T> collection, Object context)
         {
-            LogFormatInternal(LogType.Error, LogOption.None, collection, SEPARATOR, context);
+            LogFormatInternal(LogType.Error, LogOption.None, collection, Separator, context);
         }
 
         /// <summary>
@@ -128,8 +120,7 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
-        public static void LogError<T>(IEnumerable<T> collection, LogOption logOption, string separator = SEPARATOR,
+        public static void LogError<T>(IEnumerable<T> collection, LogOption logOption, string separator = Separator,
             Object context = null)
         {
             LogFormatInternal(LogType.Error, logOption, collection, separator, context);
@@ -143,10 +134,9 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
         public static void LogError<T>(IEnumerable<T> collection, LogOption logOption, Object context)
         {
-            LogFormatInternal(LogType.Error, logOption, collection, SEPARATOR, context);
+            LogFormatInternal(LogType.Error, logOption, collection, Separator, context);
         }
 
         //------------------------------------------------------------------------------------------------------------------
@@ -158,7 +148,6 @@ namespace MobX
         /// <param name="args">Format arguments.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
         public static void LogErrorFormat(string format, params object[] args)
         {
             LogFormatInternal(LogType.Error, LogOption.None, format, args, null);
@@ -172,7 +161,6 @@ namespace MobX
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
-        [Conditional("LOG_VERBOSITY_ERROR")]
         public static void LogErrorFormat(Object context, string format, params object[] args)
         {
             LogFormatInternal(LogType.Error, LogOption.None, format, args, context);

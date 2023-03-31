@@ -1,8 +1,10 @@
 ﻿using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using File = System.IO.File;
 
 namespace MobX
 {
@@ -17,9 +19,9 @@ namespace MobX
         /// <summary>
         /// Default collection item separation character.
         /// </summary>
-        private const string SEPARATOR = ", ";
+        private const string Separator = ", ";
 
-        private static readonly Dictionary<LogType, HashSet<LogCategory>> blockedLogCategories =
+        private static Dictionary<LogType, HashSet<LogCategory>> blockedLogCategories =
             new Dictionary<LogType, HashSet<LogCategory>>()
             {
                 {LogType.Log, new HashSet<LogCategory>(16)},
@@ -29,7 +31,7 @@ namespace MobX
                 {LogType.Assert, new HashSet<LogCategory>(16)}
             };
 
-        private static readonly Dictionary<LogType, HashSet<LogCategory>> unblockedLogCategories =
+        private static Dictionary<LogType, HashSet<LogCategory>> unblockedLogCategories =
             new Dictionary<LogType, HashSet<LogCategory>>()
             {
                 {LogType.Log, new HashSet<LogCategory>(16)},
@@ -130,6 +132,46 @@ namespace MobX
             messageBuffer.CopyTo(resultBuffer.Slice(index, messageBuffer.Length));
 
             return resultBuffer.ToString();
+        }
+
+        /// <summary>
+        /// Load blocked and unblocked data.
+        /// </summary>
+        [PublicAPI]
+        private static void LoadEditorData()
+        {
+            if (!Application.isEditor)
+            {
+                return;
+            }
+            var path = $"{Application.dataPath.Replace("Assets", "Library")}/MobXDebug.json";
+            if (File.Exists(path))
+            {
+                var json = File.ReadAllText(path);
+                var data = JsonUtility.FromJson<DebugSettingsData>(json);
+                blockedLogCategories = data.BlockedLogCategories;
+                unblockedLogCategories = data.UnblockedLogCategories;
+            }
+        }
+
+        /// <summary>
+        /// Save blocked and unblocked data.
+        /// </summary>
+        [PublicAPI]
+        public static void SaveEditorData()
+        {
+            if (!Application.isEditor)
+            {
+                return;
+            }
+            var path = $"{Application.dataPath.Replace("Assets", "Library")}/MobXDebug.json";
+            var data = new DebugSettingsData
+            {
+                BlockedLogCategories = blockedLogCategories,
+                UnblockedLogCategories = unblockedLogCategories
+            };
+            var json = JsonUtility.ToJson(data, true);
+            File.WriteAllText(path, json);
         }
     }
 }
