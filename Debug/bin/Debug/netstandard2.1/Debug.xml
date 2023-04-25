@@ -84,32 +84,193 @@
         </member>
         <member name="M:MobX.Debug.LineNumber(System.Int32)">
             <summary>
-            Returns the callers line number as an integer.
+            Returns the callers line number as an integer, captured at compile time.
             </summary>
             <param name="lineNumber">Buffer used by compiler</param>
             <returns>The current line number at compile time.</returns>
         </member>
         <member name="M:MobX.Debug.MemberName(System.String)">
             <summary>
-            Returns the callers member name at compile time.
+            Returns the callers member name, captured at compile time.
+            </summary>
+            <param name="memberName">Buffer used by compiler</param>
+            <returns>The name of the method or property calling this method.</returns>
+        </member>
+        <member name="M:MobX.Debug.MethodName(System.String)">
+            <summary>
+            Returns the callers member name, captured at compile time.
             </summary>
             <param name="memberName">Buffer used by compiler</param>
             <returns>The name of the method or property calling this method.</returns>
         </member>
         <member name="M:MobX.Debug.FilePath(System.String)">
             <summary>
-            Returns the callers file path at compile time.
+            Returns the callers file path, captured at compile time.
             </summary>
             <param name="filePath">Buffer used by compiler</param>
             <returns>The current file path at compile time.</returns>
         </member>
+        <member name="P:MobX.Debug.LinePrefix">
+            <summary>
+            prefix used when calling <see cref="M:MobX.Debug.LogLine(UnityEngine.LogOption,UnityEngine.Object,System.Int32)"/>
+            </summary>
+        </member>
         <member name="M:MobX.Debug.LogLine(UnityEngine.LogOption,UnityEngine.Object,System.Int32)">
             <summary>
-            Log the current line as $"Line {line}"
+            The current line number at compile time.
             </summary>
             <param name="logOption"></param>
             <param name="context"></param>
             <param name="line"></param>
+        </member>
+        <member name="M:MobX.Debug.LogLine(UnityEngine.Object,System.Int32)">
+            <summary>
+            The current line number at compile time.
+            </summary>
+            <param name="context"></param>
+            <param name="line"></param>
+        </member>
+        <member name="M:MobX.Debug.LogLine(MobX.LogCategory,UnityEngine.LogOption,UnityEngine.Object,System.Int32)">
+            <summary>
+            The current line number at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="logOption"></param>
+            <param name="context"></param>
+            <param name="line"></param>
+        </member>
+        <member name="M:MobX.Debug.LogLine(MobX.LogCategory,UnityEngine.Object,System.Int32)">
+            <summary>
+            The current line number at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="context"></param>
+            <param name="line"></param>
+        </member>
+        <member name="M:MobX.Debug.LogLine(System.String,UnityEngine.LogOption,UnityEngine.Object,System.Int32)">
+            <summary>
+            The current line number at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="logOption"></param>
+            <param name="context"></param>
+            <param name="line"></param>
+        </member>
+        <member name="M:MobX.Debug.LogLine(System.String,UnityEngine.Object,System.Int32)">
+            <summary>
+            The current line number at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="context"></param>
+            <param name="line"></param>
+        </member>
+        <member name="P:MobX.Debug.MemberPrefix">
+            <summary>
+            prefix used when calling <see cref="M:MobX.Debug.LogMember(UnityEngine.LogOption,UnityEngine.Object,System.String)"/>
+            </summary>
+        </member>
+        <member name="M:MobX.Debug.LogMember(UnityEngine.LogOption,UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers member name at compile time.
+            </summary>
+            <param name="logOption"></param>
+            <param name="context"></param>
+            <param name="member"></param>
+        </member>
+        <member name="M:MobX.Debug.LogMember(UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers member name at compile time.
+            </summary>
+            <param name="context"></param>
+            <param name="member"></param>
+        </member>
+        <member name="M:MobX.Debug.LogMember(MobX.LogCategory,UnityEngine.LogOption,UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers member name at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="logOption"></param>
+            <param name="context"></param>
+            <param name="member"></param>
+        </member>
+        <member name="M:MobX.Debug.LogMember(MobX.LogCategory,UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers member name at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="context"></param>
+            <param name="member"></param>
+        </member>
+        <member name="M:MobX.Debug.LogMember(System.String,UnityEngine.LogOption,UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers member name at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="logOption"></param>
+            <param name="context"></param>
+            <param name="member"></param>
+        </member>
+        <member name="M:MobX.Debug.LogMember(System.String,UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers member name at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="context"></param>
+            <param name="member"></param>
+        </member>
+        <member name="P:MobX.Debug.FilePrefix">
+            <summary>
+            prefix used when calling <see cref="M:MobX.Debug.LogFile(UnityEngine.LogOption,UnityEngine.Object,System.String)"/>
+            </summary>
+        </member>
+        <member name="M:MobX.Debug.LogFile(UnityEngine.LogOption,UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers file path name captured at compile time.
+            </summary>
+            <param name="logOption"></param>
+            <param name="context"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:MobX.Debug.LogFile(UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers file path name captured at compile time.
+            </summary>
+            <param name="context"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:MobX.Debug.LogFile(MobX.LogCategory,UnityEngine.LogOption,UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers file path name captured at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="logOption"></param>
+            <param name="context"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:MobX.Debug.LogFile(MobX.LogCategory,UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers file path name captured at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="context"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:MobX.Debug.LogFile(System.String,UnityEngine.LogOption,UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers file path name captured at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="logOption"></param>
+            <param name="context"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:MobX.Debug.LogFile(System.String,UnityEngine.Object,System.String)">
+            <summary>
+            Log the callers file path name captured at compile time.
+            </summary>
+            <param name="category"></param>
+            <param name="context"></param>
+            <param name="path"></param>
         </member>
         <member name="P:MobX.Debug.unityLogger">
             <summary>

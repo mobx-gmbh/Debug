@@ -28,6 +28,16 @@ namespace MobX
         }
 
         /// <summary>
+        /// Returns the callers member name, captured at compile time.
+        /// </summary>
+        /// <param name="memberName">Buffer used by compiler</param>
+        /// <returns>The name of the method or property calling this method.</returns>
+        public static string MethodName([CallerMemberName] string memberName = default)
+        {
+            return memberName;
+        }
+
+        /// <summary>
         /// Returns the callers file path, captured at compile time.
         /// </summary>
         /// <param name="filePath">Buffer used by compiler</param>
