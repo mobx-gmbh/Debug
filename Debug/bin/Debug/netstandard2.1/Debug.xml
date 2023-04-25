@@ -82,6 +82,35 @@
             <param name="args">Format arguments.</param>
             <param name="context">Object to which the message applies.</param>
         </member>
+        <member name="M:MobX.Debug.LineNumber(System.Int32)">
+            <summary>
+            Returns the callers line number as an integer.
+            </summary>
+            <param name="lineNumber">Buffer used by compiler</param>
+            <returns>The current line number at compile time.</returns>
+        </member>
+        <member name="M:MobX.Debug.MemberName(System.String)">
+            <summary>
+            Returns the callers member name at compile time.
+            </summary>
+            <param name="memberName">Buffer used by compiler</param>
+            <returns>The name of the method or property calling this method.</returns>
+        </member>
+        <member name="M:MobX.Debug.FilePath(System.String)">
+            <summary>
+            Returns the callers file path at compile time.
+            </summary>
+            <param name="filePath">Buffer used by compiler</param>
+            <returns>The current file path at compile time.</returns>
+        </member>
+        <member name="M:MobX.Debug.LogLine(UnityEngine.LogOption,UnityEngine.Object,System.Int32)">
+            <summary>
+            Log the current line as $"Line {line}"
+            </summary>
+            <param name="logOption"></param>
+            <param name="context"></param>
+            <param name="line"></param>
+        </member>
         <member name="P:MobX.Debug.unityLogger">
             <summary>
               <para>Get default debug logger.</para>
