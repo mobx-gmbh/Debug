@@ -10,12 +10,13 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DocumentationFile>bin\Debug\Debug.xml</DocumentationFile>
+      <DocumentationFile>bin\Debug\com.mobx.debug.xml</DocumentationFile>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DocumentationFile>bin\Release\Debug.xml</DocumentationFile>
+      <DocumentationFile>bin\Release\com.mobx.debug.xml</DocumentationFile>
       <DefineConstants />
+      <DebugSymbols>true</DebugSymbols>
     </PropertyGroup>
 
     <ItemGroup>

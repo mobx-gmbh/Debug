@@ -217,7 +217,7 @@ namespace MobX
         /// <param name="logOption"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
-        public static void LogFile(LogOption logOption, Object context = null, [CallerMemberName] string path = default)
+        public static void LogFile(LogOption logOption, Object context = null, [CallerFilePath] string path = default)
         {
             LogFormatInternal(LogCategory.Log, LogType.Log, logOption, $"{FilePrefix}{path}", null, context);
         }
@@ -227,7 +227,7 @@ namespace MobX
         /// </summary>
         /// <param name="context"></param>
         /// <param name="path"></param>
-        public static void LogFile(Object context = null, [CallerMemberName] string path = default)
+        public static void LogFile(Object context = null, [CallerFilePath] string path = default)
         {
             LogFormatInternal(LogCategory.Log, LogType.Log, LogOption.None, $"{FilePrefix}{path}", null, context);
         }
@@ -239,7 +239,7 @@ namespace MobX
         /// <param name="logOption"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
-        public static void LogFile(LogCategory category, LogOption logOption, Object context = null, [CallerMemberName] string path = default)
+        public static void LogFile(LogCategory category, LogOption logOption, Object context = null, [CallerFilePath] string path = default)
         {
             LogFormatInternal(category, LogType.Log, logOption, $"{FilePrefix}{path}", null, context);
         }
@@ -250,7 +250,7 @@ namespace MobX
         /// <param name="category"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
-        public static void LogFile(LogCategory category, Object context = null, [CallerMemberName] string path = default)
+        public static void LogFile(LogCategory category, Object context = null, [CallerFilePath] string path = default)
         {
             LogFormatInternal(category, LogType.Log, LogOption.None, $"{FilePrefix}{path}", null, context);
         }
@@ -262,7 +262,7 @@ namespace MobX
         /// <param name="logOption"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
-        public static void LogFile(string category, LogOption logOption, Object context = null, [CallerMemberName] string path = default)
+        public static void LogFile(string category, LogOption logOption, Object context = null, [CallerFilePath] string path = default)
         {
             LogFormatInternal(category, LogType.Log, logOption, $"{FilePrefix}{path}", null, context);
         }
@@ -273,7 +273,7 @@ namespace MobX
         /// <param name="category"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
-        public static void LogFile(string category, Object context = null, [CallerMemberName] string path = default)
+        public static void LogFile(string category, Object context = null, [CallerFilePath] string path = default)
         {
             LogFormatInternal(category, LogType.Log, LogOption.None, $"{FilePrefix}{path}", null, context);
         }
