@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Repositories\\Debug\\Debug\\Debug.csproj",
+      "projectUniqueName": "D:\\MobX\\Debug\\Debug\\Debug.csproj",
       "projectName": "com.mobx.debug",
-      "projectPath": "E:\\Repositories\\Debug\\Debug\\Debug.csproj",
+      "projectPath": "D:\\MobX\\Debug\\Debug\\Debug.csproj",
       "packagesPath": "C:\\Users\\Jonathan-Desktop\\.nuget\\packages\\",
-      "outputPath": "E:\\Repositories\\Debug\\Debug\\obj\\",
+      "outputPath": "D:\\MobX\\Debug\\Debug\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -66,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

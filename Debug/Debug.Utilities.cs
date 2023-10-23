@@ -115,6 +115,7 @@ namespace MobX
         /// Combines two strings with minimal allocation.
         /// </summary>
         [PublicAPI]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string CreateLogCategoryMessageNoAlloc(LogCategory category, string message)
         {
             var categoryBuffer = (ReadOnlySpan<char>) category.Name;
@@ -131,6 +132,51 @@ namespace MobX
             messageBuffer.CopyTo(resultBuffer.Slice(index, messageBuffer.Length));
 
             return resultBuffer.ToString();
+        }
+
+        /// <summary>
+        /// Combines two strings with minimal allocation.
+        /// </summary>
+        [PublicAPI]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static string CreateLogCategoryMessageNoAlloc(LogCategory category, string message, Color color)
+        {
+            var categoryBuffer = (ReadOnlySpan<char>) category.Name;
+            var messageBuffer = (ReadOnlySpan<char>) message;
+
+            const int ColorCodeLength = 8; // RGBA in HTML format.
+            var totalLength = categoryBuffer.Length + messageBuffer.Length + 3 + 17 + ColorCodeLength; // 3 for "[ ] ", 17 for "<color=#></color>", 8 for color code
+
+            Span<char> resultBuffer = stackalloc char[totalLength]; // Adjust size as needed
+
+            var index = 0;
+
+            // Insert opening color tag
+            "<color=#".AsSpan().CopyTo(resultBuffer.Slice(index, 8));
+            index += 8;
+
+            ColorUtility.ToHtmlStringRGBA(color).AsSpan().CopyTo(resultBuffer.Slice(index, ColorCodeLength));
+            index += ColorCodeLength;
+
+            resultBuffer[index++] = '>';
+
+            // Insert log category
+            resultBuffer[index++] = '[';
+            categoryBuffer.CopyTo(resultBuffer.Slice(index, categoryBuffer.Length));
+            index += categoryBuffer.Length;
+            resultBuffer[index++] = ']';
+
+            // Insert closing color tag
+            "</color>".AsSpan().CopyTo(resultBuffer.Slice(index, 8));
+            index += 8;
+
+            // Insert space
+            resultBuffer[index++] = ' ';
+
+            // Insert message
+            messageBuffer.CopyTo(resultBuffer.Slice(index, messageBuffer.Length));
+
+            return new string(resultBuffer);
         }
 
         /// <summary>
@@ -171,6 +217,64 @@ namespace MobX
             };
             var json = JsonUtility.ToJson(data, true);
             File.WriteAllText(path, json);
+        }
+
+        /// <summary>
+        /// Colorize the passed string
+        /// </summary>
+        /// <param name="content"></param>
+        /// <param name="color"></param>
+        /// <returns></returns>
+        [PublicAPI]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static string Colorize(this string content, Color color)
+        {
+            // Calculate the length needed for the final string.
+            var colorCodeLength = 8; // RGBA in HTML format.
+            var contentLength = content.Length;
+            var totalLength = 17 + colorCodeLength + contentLength; // Length of "<color=#></color>" + color code + content.
+
+            // Use stack-allocated memory if the string is small.
+            var span = totalLength <= 128 ? stackalloc char[totalLength] : new char[totalLength];
+
+            "<color=#".AsSpan().CopyTo(span.Slice(0, 8));
+
+            ColorUtility.ToHtmlStringRGBA(color).AsSpan().CopyTo(span.Slice(8, colorCodeLength));
+
+            ">".AsSpan().CopyTo(span.Slice(8 + colorCodeLength, 1));
+            content.AsSpan().CopyTo(span.Slice(9 + colorCodeLength, contentLength));
+            "</color>".AsSpan().CopyTo(span.Slice(9 + colorCodeLength + contentLength));
+
+            return new string(span);
+        }
+
+        /// <summary>
+        /// Colorize the passed string
+        /// </summary>
+        /// <param name="content"></param>
+        /// <param name="color"></param>
+        /// <returns></returns>
+        [PublicAPI]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static string Colorize(this Span<char> content, Color color)
+        {
+            // Calculate the length needed for the final string.
+            var colorCodeLength = 8; // RGBA in HTML format.
+            var contentLength = content.Length;
+            var totalLength = 17 + colorCodeLength + contentLength; // Length of "<color=#></color>" + color code + content.
+
+            // Use stack-allocated memory if the string is small.
+            var span = totalLength <= 128 ? stackalloc char[totalLength] : new char[totalLength];
+
+            "<color=#".AsSpan().CopyTo(span.Slice(0, 8));
+
+            ColorUtility.ToHtmlStringRGBA(color).AsSpan().CopyTo(span.Slice(8, colorCodeLength));
+
+            ">".AsSpan().CopyTo(span.Slice(8 + colorCodeLength, 1));
+            content.CopyTo(span.Slice(9 + colorCodeLength, contentLength));
+            "</color>".AsSpan().CopyTo(span.Slice(9 + colorCodeLength + contentLength));
+
+            return new string(span);
         }
     }
 }

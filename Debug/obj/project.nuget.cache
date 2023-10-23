@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jmQi1dGXWw/JitnjdQMnn88KlqH1iyw3WgYJ6HxZgizIHWIK5Bhran6wDDqBuIR7yMfgHX79tJfQP/cexQrYJg==",
+  "dgSpecHash": "mJtUWnpehroItm9DLlUimJpVqFfPZk7OQ1A5hjJhGCuGfN4lfWwhyQ5gR6osOVVbkX2WY5uFkq55JAZ2FG9iFQ==",
   "success": true,
-  "projectFilePath": "E:\\Repositories\\Debug\\Debug\\Debug.csproj",
+  "projectFilePath": "D:\\MobX\\Debug\\Debug\\Debug.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

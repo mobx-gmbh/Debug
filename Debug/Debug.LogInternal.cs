@@ -83,5 +83,54 @@ namespace MobX
             var messageString = message.ToString();
             UnityEngine.Debug.Log(CreateLogCategoryMessageNoAlloc(category, messageString), context);
         }
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        [DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void LogMessageInternal(LogCategory category, string message, Object context, Color color)
+        {
+            if (IsLogCategoryBlocked(category))
+            {
+                return;
+            }
+
+            UnityEngine.Debug.Log(
+                Application.isEditor
+                    ? CreateLogCategoryMessageNoAlloc(category, message, color)
+                    : CreateLogCategoryMessageNoAlloc(category, message), context);
+        }
+
+        [DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void LogMessageInternal(LogCategory category, object message, Object context, Color color)
+        {
+            if (IsLogCategoryBlocked(category))
+            {
+                return;
+            }
+
+            var messageString = message.ToString();
+            UnityEngine.Debug.Log(
+                Application.isEditor
+                    ? CreateLogCategoryMessageNoAlloc(category, messageString, color)
+                    : CreateLogCategoryMessageNoAlloc(category, messageString), context);
+        }
+
+        [DebuggerHidden]
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        private static void LogMessageInternal<T>(LogCategory category, T message, Object context, Color color) where T : struct
+        {
+            if (IsLogCategoryBlocked(category))
+            {
+                return;
+            }
+
+            var messageString = message.ToString();
+            UnityEngine.Debug.Log(
+                Application.isEditor
+                    ? CreateLogCategoryMessageNoAlloc(category, messageString, color)
+                    : CreateLogCategoryMessageNoAlloc(category, messageString), context);
+        }
     }
 }

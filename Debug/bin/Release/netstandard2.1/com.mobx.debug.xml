@@ -509,6 +509,33 @@
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="context">Object to which the message applies.</param>
         </member>
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.Object,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,``0,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
         <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,UnityEngine.LogOption,UnityEngine.Object)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
@@ -536,6 +563,63 @@
             <param name="logOption">Additional log options.</param>
             <param name="context">Object to which the message applies.</param>
         </member>
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="logOption">Additional log options.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.Object,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="logOption">Additional log options.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,``0,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="logOption">Additional log options.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,System.Object,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:MobX.Debug.Log``1(System.String,``0,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
         <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.Object)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
@@ -558,6 +642,36 @@
             </summary>
             <param name="category">Custom log category.</param>
             <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="logOption">Additional log options.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,System.Object,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="logOption">Additional log options.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+        </member>
+        <member name="M:MobX.Debug.Log``1(System.String,``0,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="logOption">Additional log options.</param>
+            <param name="color">Log category color</param>
             <param name="context">Object to which the message applies.</param>
         </member>
         <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.LogOption,UnityEngine.Object)">
@@ -1251,6 +1365,11 @@
             Combines two strings with minimal allocation.
             </summary>
         </member>
+        <member name="M:MobX.Debug.CreateLogCategoryMessageNoAlloc(MobX.LogCategory,System.String,UnityEngine.Color)">
+            <summary>
+            Combines two strings with minimal allocation.
+            </summary>
+        </member>
         <member name="M:MobX.Debug.LoadEditorData">
             <summary>
             Load blocked and unblocked data.
@@ -1260,6 +1379,22 @@
             <summary>
             Save blocked and unblocked data.
             </summary>
+        </member>
+        <member name="M:MobX.Debug.Colorize(System.String,UnityEngine.Color)">
+            <summary>
+            Colorize the passed string
+            </summary>
+            <param name="content"></param>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MobX.Debug.Colorize(System.Span{System.Char},UnityEngine.Color)">
+            <summary>
+            Colorize the passed string
+            </summary>
+            <param name="content"></param>
+            <param name="color"></param>
+            <returns></returns>
         </member>
         <member name="T:MobX.DebugExtensions">
             <summary>

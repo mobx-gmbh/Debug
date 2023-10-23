@@ -12,3 +12,17 @@ E:\Repositories\Debug\Debug\bin\Debug\netstandard2.1\com.mobx.debug.dll
 E:\Repositories\Debug\Debug\bin\Debug\netstandard2.1\com.mobx.debug.pdb
 E:\Repositories\Debug\Debug\obj\Debug\netstandard2.1\com.mobx.debug.dll
 E:\Repositories\Debug\Debug\obj\Debug\netstandard2.1\com.mobx.debug.pdb
+D:\MobX\Debug\Debug\bin\Debug\netstandard2.1\com.mobx.debug.deps.json
+D:\MobX\Debug\Debug\bin\Debug\netstandard2.1\com.mobx.debug.dll
+D:\MobX\Debug\Debug\bin\Debug\netstandard2.1\com.mobx.debug.pdb
+D:\MobX\Debug\Debug\bin\Debug\netstandard2.1\com.mobx.debug.xml
+D:\MobX\Debug\Debug\bin\Debug\netstandard2.1\UnityEngine.dll
+D:\MobX\Debug\Debug\bin\Debug\netstandard2.1\UnityEngine.xml
+D:\MobX\Debug\Debug\obj\Debug\netstandard2.1\Debug.csproj.AssemblyReference.cache
+D:\MobX\Debug\Debug\obj\Debug\netstandard2.1\Debug.GeneratedMSBuildEditorConfig.editorconfig
+D:\MobX\Debug\Debug\obj\Debug\netstandard2.1\Debug.AssemblyInfoInputs.cache
+D:\MobX\Debug\Debug\obj\Debug\netstandard2.1\Debug.AssemblyInfo.cs
+D:\MobX\Debug\Debug\obj\Debug\netstandard2.1\Debug.csproj.CoreCompileInputs.cache
+D:\MobX\Debug\Debug\obj\Debug\netstandard2.1\Debug.csproj.CopyComplete
+D:\MobX\Debug\Debug\obj\Debug\netstandard2.1\com.mobx.debug.dll
+D:\MobX\Debug\Debug\obj\Debug\netstandard2.1\com.mobx.debug.pdb

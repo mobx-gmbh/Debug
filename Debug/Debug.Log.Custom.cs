@@ -59,6 +59,53 @@ namespace MobX
         /// </summary>
         /// <param name="category">Custom log category.</param>
         /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log(LogCategory category, string message, Color color, Object context = null)
+        {
+            LogMessageInternal(category, message, context, color);
+        }
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log(LogCategory category, object message, Color color, Object context = null)
+        {
+            LogMessageInternal(category, message, context, color);
+        }
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log<T>(LogCategory category, T message, Color color, Object context = null) where T : struct
+        {
+            LogMessageInternal(category, message, context, color);
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
         /// <param name="logOption">Additional log options.</param>
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
@@ -107,6 +154,104 @@ namespace MobX
         /// </summary>
         /// <param name="category">Custom log category.</param>
         /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="logOption">Additional log options.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log(LogCategory category, string message, LogOption logOption, Color color, Object context = null)
+        {
+            LogFormatInternal(category, LogType.Log, logOption, message, null, context);
+        }
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="logOption">Additional log options.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log(LogCategory category, object message, LogOption logOption, Color color, Object context = null)
+        {
+            LogFormatInternal(category, LogType.Log, logOption, message, null, context);
+        }
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="logOption">Additional log options.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log<T>(LogCategory category, T message, LogOption logOption, Color color, Object context = null)
+            where T : struct
+        {
+            LogFormatInternal(category, LogType.Log, logOption, message, null, context);
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log(string category, string message, Color color, Object context = null)
+        {
+            LogMessageInternal(category, message, context, color);
+        }
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log(string category, object message, Color color, Object context = null)
+        {
+            LogMessageInternal(category, message, context, color);
+        }
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log<T>(string category, T message, Color color, Object context = null) where T : struct
+        {
+            LogMessageInternal(category, message, context, color);
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
         /// <param name="context">Object to which the message applies.</param>
         [PublicAPI]
         [DebuggerHidden]
@@ -142,6 +287,57 @@ namespace MobX
         public static void Log<T>(string category, T message, Object context = null) where T : struct
         {
             LogMessageInternal(category, message, context);
+        }
+
+        //--------------------------------------------------------------------------------------------------------------
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="logOption">Additional log options.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log(string category, string message, LogOption logOption, Color color, Object context = null)
+        {
+            LogFormatInternal(category, LogType.Log, logOption, message, null, context);
+        }
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="logOption">Additional log options.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log(string category, object message, LogOption logOption, Color color, Object context = null)
+        {
+            LogFormatInternal(category, LogType.Log, logOption, message, null, context);
+        }
+
+        /// <summary>
+        ///   <para>Logs a message to the Unity Console.</para>
+        /// </summary>
+        /// <param name="category">Custom log category.</param>
+        /// <param name="message">String or object to be converted to string representation for display.</param>
+        /// <param name="logOption">Additional log options.</param>
+        /// <param name="color">Log category color</param>
+        /// <param name="context">Object to which the message applies.</param>
+        [PublicAPI]
+        [DebuggerHidden]
+        [Conditional("DEBUG")]
+        public static void Log<T>(string category, T message, LogOption logOption, Color color, Object context = null)
+            where T : struct
+        {
+            LogFormatInternal(category, LogType.Log, logOption, message, null, context);
         }
 
         //--------------------------------------------------------------------------------------------------------------
