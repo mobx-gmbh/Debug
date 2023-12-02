@@ -55,7 +55,7 @@ namespace MobX
         [DebuggerHidden]
         public static void LogError(string error, LogOption logOption, Object context = null)
         {
-            LogFormatInternal(LogType.Error, logOption, error, null, context);
+            LogFormatInternal(LogType.Error, logOption, error, null, context, Verbosity.Error);
         }
 
         /// <summary>
@@ -68,7 +68,7 @@ namespace MobX
         [DebuggerHidden]
         public static void LogError(object error, LogOption logOption, Object context = null)
         {
-            LogFormatInternal(LogType.Error, logOption, error, null, context);
+            LogFormatInternal(LogType.Error, logOption, error, null, context, Verbosity.Error);
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace MobX
         [DebuggerHidden]
         public static void LogError<T>(T error, LogOption logOption, Object context = null) where T : struct
         {
-            LogFormatInternal(LogType.Error, logOption, error, null, context);
+            LogFormatInternal(LogType.Error, logOption, error, null, context, Verbosity.Error);
         }
 
         //--------------------------------------------------------------------------------------------------------------
@@ -96,7 +96,7 @@ namespace MobX
         [DebuggerHidden]
         public static void LogError<T>(IEnumerable<T> collection, string separator = Separator, Object context = null)
         {
-            LogFormatInternal(LogType.Error, LogOption.None, collection, separator, context);
+            LogFormatInternal(LogType.Error, LogOption.None, collection, separator, context, Verbosity.Error);
         }
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace MobX
         [DebuggerHidden]
         public static void LogError<T>(IEnumerable<T> collection, Object context)
         {
-            LogFormatInternal(LogType.Error, LogOption.None, collection, Separator, context);
+            LogFormatInternal(LogType.Error, LogOption.None, collection, Separator, context, Verbosity.Error);
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace MobX
         public static void LogError<T>(IEnumerable<T> collection, LogOption logOption, string separator = Separator,
             Object context = null)
         {
-            LogFormatInternal(LogType.Error, logOption, collection, separator, context);
+            LogFormatInternal(LogType.Error, logOption, collection, separator, context, Verbosity.Error);
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace MobX
         [DebuggerHidden]
         public static void LogError<T>(IEnumerable<T> collection, LogOption logOption, Object context)
         {
-            LogFormatInternal(LogType.Error, logOption, collection, Separator, context);
+            LogFormatInternal(LogType.Error, logOption, collection, Separator, context, Verbosity.Error);
         }
 
         //------------------------------------------------------------------------------------------------------------------
@@ -150,7 +150,7 @@ namespace MobX
         [DebuggerHidden]
         public static void LogErrorFormat(string format, params object[] args)
         {
-            LogFormatInternal(LogType.Error, LogOption.None, format, args, null);
+            LogFormatInternal(LogType.Error, LogOption.None, format, args, null, Verbosity.Error);
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace MobX
         [DebuggerHidden]
         public static void LogErrorFormat(Object context, string format, params object[] args)
         {
-            LogFormatInternal(LogType.Error, LogOption.None, format, args, context);
+            LogFormatInternal(LogType.Error, LogOption.None, format, args, context, Verbosity.Error);
         }
     }
 }

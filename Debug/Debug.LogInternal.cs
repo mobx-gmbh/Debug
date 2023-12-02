@@ -8,8 +8,13 @@ namespace MobX
     {
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void LogMessageInternal(string message, Object context)
+        private static void LogMessageInternal(string message, Object context, Verbosity verbosity = Verbosity.Verbose)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(LogCategory.Log))
             {
                 return;
@@ -20,8 +25,13 @@ namespace MobX
 
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void LogMessageInternal(object message, Object context)
+        private static void LogMessageInternal(object message, Object context, Verbosity verbosity = Verbosity.Verbose)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(LogCategory.Log))
             {
                 return;
@@ -33,8 +43,13 @@ namespace MobX
 
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void LogMessageInternal<T>(T message, Object context) where T : struct
+        private static void LogMessageInternal<T>(T message, Object context, Verbosity verbosity = Verbosity.Verbose) where T : struct
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(LogCategory.Log))
             {
                 return;
@@ -48,8 +63,13 @@ namespace MobX
 
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void LogMessageInternal(LogCategory category, string message, Object context)
+        private static void LogMessageInternal(LogCategory category, string message, Object context, Verbosity verbosity = Verbosity.Verbose)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category))
             {
                 return;
@@ -60,8 +80,13 @@ namespace MobX
 
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void LogMessageInternal(LogCategory category, object message, Object context)
+        private static void LogMessageInternal(LogCategory category, object message, Object context, Verbosity verbosity = Verbosity.Verbose)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category))
             {
                 return;
@@ -73,8 +98,13 @@ namespace MobX
 
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void LogMessageInternal<T>(LogCategory category, T message, Object context) where T : struct
+        private static void LogMessageInternal<T>(LogCategory category, T message, Object context, Verbosity verbosity = Verbosity.Verbose) where T : struct
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category))
             {
                 return;
@@ -88,8 +118,13 @@ namespace MobX
 
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void LogMessageInternal(LogCategory category, string message, Object context, Color color)
+        private static void LogMessageInternal(LogCategory category, string message, Object context, Color color, Verbosity verbosity)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category))
             {
                 return;
@@ -103,8 +138,13 @@ namespace MobX
 
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void LogMessageInternal(LogCategory category, object message, Object context, Color color)
+        private static void LogMessageInternal(LogCategory category, object message, Object context, Color color, Verbosity verbosity)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category))
             {
                 return;
@@ -119,8 +159,13 @@ namespace MobX
 
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void LogMessageInternal<T>(LogCategory category, T message, Object context, Color color) where T : struct
+        private static void LogMessageInternal<T>(LogCategory category, T message, Object context, Color color, Verbosity verbosity) where T : struct
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category))
             {
                 return;

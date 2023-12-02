@@ -112,10 +112,10 @@
         </member>
         <member name="P:MobX.Debug.LinePrefix">
             <summary>
-            prefix used when calling <see cref="M:MobX.Debug.LogLine(UnityEngine.LogOption,UnityEngine.Object,System.Int32)"/>
+            prefix used when calling <see cref="!:LogLine(UnityEngine.LogOption,UnityEngine.Object,int)"/>
             </summary>
         </member>
-        <member name="M:MobX.Debug.LogLine(UnityEngine.LogOption,UnityEngine.Object,System.Int32)">
+        <member name="M:MobX.Debug.LogLine(UnityEngine.LogOption,UnityEngine.Object,System.Int32,MobX.Verbosity)">
             <summary>
             The current line number at compile time.
             </summary>
@@ -123,14 +123,14 @@
             <param name="context"></param>
             <param name="line"></param>
         </member>
-        <member name="M:MobX.Debug.LogLine(UnityEngine.Object,System.Int32)">
+        <member name="M:MobX.Debug.LogLine(UnityEngine.Object,System.Int32,MobX.Verbosity)">
             <summary>
             The current line number at compile time.
             </summary>
             <param name="context"></param>
             <param name="line"></param>
         </member>
-        <member name="M:MobX.Debug.LogLine(MobX.LogCategory,UnityEngine.LogOption,UnityEngine.Object,System.Int32)">
+        <member name="M:MobX.Debug.LogLine(MobX.LogCategory,UnityEngine.LogOption,UnityEngine.Object,System.Int32,MobX.Verbosity)">
             <summary>
             The current line number at compile time.
             </summary>
@@ -139,7 +139,7 @@
             <param name="context"></param>
             <param name="line"></param>
         </member>
-        <member name="M:MobX.Debug.LogLine(MobX.LogCategory,UnityEngine.Object,System.Int32)">
+        <member name="M:MobX.Debug.LogLine(MobX.LogCategory,UnityEngine.Object,System.Int32,MobX.Verbosity)">
             <summary>
             The current line number at compile time.
             </summary>
@@ -147,7 +147,7 @@
             <param name="context"></param>
             <param name="line"></param>
         </member>
-        <member name="M:MobX.Debug.LogLine(System.String,UnityEngine.LogOption,UnityEngine.Object,System.Int32)">
+        <member name="M:MobX.Debug.LogLine(System.String,UnityEngine.LogOption,UnityEngine.Object,System.Int32,MobX.Verbosity)">
             <summary>
             The current line number at compile time.
             </summary>
@@ -156,7 +156,7 @@
             <param name="context"></param>
             <param name="line"></param>
         </member>
-        <member name="M:MobX.Debug.LogLine(System.String,UnityEngine.Object,System.Int32)">
+        <member name="M:MobX.Debug.LogLine(System.String,UnityEngine.Object,System.Int32,MobX.Verbosity)">
             <summary>
             The current line number at compile time.
             </summary>
@@ -166,10 +166,10 @@
         </member>
         <member name="P:MobX.Debug.MemberPrefix">
             <summary>
-            prefix used when calling <see cref="M:MobX.Debug.LogMember(UnityEngine.LogOption,UnityEngine.Object,System.String)"/>
+            prefix used when calling <see cref="!:LogMember(UnityEngine.LogOption,UnityEngine.Object,string)"/>
             </summary>
         </member>
-        <member name="M:MobX.Debug.LogMember(UnityEngine.LogOption,UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogMember(UnityEngine.LogOption,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers member name at compile time.
             </summary>
@@ -177,14 +177,14 @@
             <param name="context"></param>
             <param name="member"></param>
         </member>
-        <member name="M:MobX.Debug.LogMember(UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogMember(UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers member name at compile time.
             </summary>
             <param name="context"></param>
             <param name="member"></param>
         </member>
-        <member name="M:MobX.Debug.LogMember(MobX.LogCategory,UnityEngine.LogOption,UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogMember(MobX.LogCategory,UnityEngine.LogOption,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers member name at compile time.
             </summary>
@@ -193,7 +193,7 @@
             <param name="context"></param>
             <param name="member"></param>
         </member>
-        <member name="M:MobX.Debug.LogMember(MobX.LogCategory,UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogMember(MobX.LogCategory,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers member name at compile time.
             </summary>
@@ -201,7 +201,7 @@
             <param name="context"></param>
             <param name="member"></param>
         </member>
-        <member name="M:MobX.Debug.LogMember(System.String,UnityEngine.LogOption,UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogMember(System.String,UnityEngine.LogOption,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers member name at compile time.
             </summary>
@@ -210,7 +210,7 @@
             <param name="context"></param>
             <param name="member"></param>
         </member>
-        <member name="M:MobX.Debug.LogMember(System.String,UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogMember(System.String,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers member name at compile time.
             </summary>
@@ -220,10 +220,10 @@
         </member>
         <member name="P:MobX.Debug.FilePrefix">
             <summary>
-            prefix used when calling <see cref="M:MobX.Debug.LogFile(UnityEngine.LogOption,UnityEngine.Object,System.String)"/>
+            prefix used when calling <see cref="!:LogFile(UnityEngine.LogOption,UnityEngine.Object,string)"/>
             </summary>
         </member>
-        <member name="M:MobX.Debug.LogFile(UnityEngine.LogOption,UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogFile(UnityEngine.LogOption,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers file path name captured at compile time.
             </summary>
@@ -231,14 +231,14 @@
             <param name="context"></param>
             <param name="path"></param>
         </member>
-        <member name="M:MobX.Debug.LogFile(UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogFile(UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers file path name captured at compile time.
             </summary>
             <param name="context"></param>
             <param name="path"></param>
         </member>
-        <member name="M:MobX.Debug.LogFile(MobX.LogCategory,UnityEngine.LogOption,UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogFile(MobX.LogCategory,UnityEngine.LogOption,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers file path name captured at compile time.
             </summary>
@@ -247,7 +247,7 @@
             <param name="context"></param>
             <param name="path"></param>
         </member>
-        <member name="M:MobX.Debug.LogFile(MobX.LogCategory,UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogFile(MobX.LogCategory,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers file path name captured at compile time.
             </summary>
@@ -255,7 +255,7 @@
             <param name="context"></param>
             <param name="path"></param>
         </member>
-        <member name="M:MobX.Debug.LogFile(System.String,UnityEngine.LogOption,UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogFile(System.String,UnityEngine.LogOption,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers file path name captured at compile time.
             </summary>
@@ -264,7 +264,7 @@
             <param name="context"></param>
             <param name="path"></param>
         </member>
-        <member name="M:MobX.Debug.LogFile(System.String,UnityEngine.Object,System.String)">
+        <member name="M:MobX.Debug.LogFile(System.String,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
             Log the callers file path name captured at compile time.
             </summary>
@@ -308,6 +308,11 @@
         <member name="P:MobX.Debug.isDebugBuild">
             <summary>
               <para>In the Build Settings dialog there is a check box called "Development Build".</para>
+            </summary>
+        </member>
+        <member name="P:MobX.Debug.Verbosity">
+            <summary>
+            Set the logging verbosity to reduce logging clutter.
             </summary>
         </member>
         <member name="M:MobX.Debug.#cctor">
@@ -383,19 +388,35 @@
             <param name="duration">How long the line will be visible for (in seconds).</param>
             <param name="depthTest">Should the line be obscured by other objects closer to the camera?</param>
         </member>
-        <member name="M:MobX.Debug.Log(System.String,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(System.String,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="message">String or object to be converted to string representation for display.</param>
-            <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log(System.Object,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(System.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.Object,UnityEngine.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
         <member name="M:MobX.Debug.Log``1(``0,UnityEngine.Object)">
             <summary>
@@ -404,46 +425,58 @@
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="context">Object to which the message applies.</param>
         </member>
-        <member name="M:MobX.Debug.Log(System.String,UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(``0,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="logOption"></param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log(System.Object,UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(System.Object,UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="logOption"></param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(``0,UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(``0,UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="logOption"></param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(System.Collections.Generic.ICollection{``0},System.String,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(System.Collections.Generic.ICollection{``0},System.String,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="collection">Collection to be converted to string representation for display.</param>
             <param name="separator">String separating collection elements</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(System.Collections.Generic.ICollection{``0},UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(System.Collections.Generic.ICollection{``0},UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="collection">Collection to be converted to string representation for display.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(System.Collections.Generic.ICollection{``0},UnityEngine.LogOption,System.String,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(System.Collections.Generic.ICollection{``0},UnityEngine.LogOption,System.String,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -451,65 +484,97 @@
             <param name="logOption"></param>
             <param name="separator">String separating collection elements</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(System.Collections.Generic.ICollection{``0},UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(System.Collections.Generic.ICollection{``0},UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="collection">Collection to be converted to string representation for display.</param>
             <param name="logOption"></param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.LogFormat(System.String,System.Object[])">
+        <member name="M:MobX.Debug.LogFormat(System.String,MobX.Verbosity,System.Object[])">
             <summary>
               <para>Logs a formatted message to the Unity Console.</para>
             </summary>
             <param name="format">A composite format string.</param>
+            <param name="verbosity">The logging verbosity level</param>
             <param name="args">Format arguments.</param>
         </member>
-        <member name="M:MobX.Debug.LogFormat(UnityEngine.Object,System.String,System.Object[])">
+        <member name="M:MobX.Debug.LogFormat(UnityEngine.Object,System.String,MobX.Verbosity,System.Object[])">
             <summary>
               <para>Logs a formatted message to the Unity Console.</para>
             </summary>
             <param name="format">A composite format string.</param>
+            <param name="verbosity">The logging verbosity level</param>
             <param name="args">Format arguments.</param>
             <param name="context">Object to which the message applies.</param>
         </member>
-        <member name="M:MobX.Debug.LogFormat(UnityEngine.LogType,UnityEngine.LogOption,UnityEngine.Object,System.String,System.Object[])">
+        <member name="M:MobX.Debug.LogFormat(UnityEngine.LogType,UnityEngine.LogOption,UnityEngine.Object,System.String,MobX.Verbosity,System.Object[])">
             <summary>
               <para>Logs a formatted message to the Unity Console.</para>
             </summary>
             <param name="format">A composite format string.</param>
+            <param name="verbosity">The logging verbosity level</param>
             <param name="args">Format arguments.</param>
             <param name="context">Object to which the message applies.</param>
             <param name="logType">Type of message e.g. warn or error etc.</param>
             <param name="logOptions">Option flags to treat the log message special.</param>
         </member>
-        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,``0,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="category">Custom log category.</param>
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.Object,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.Object,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="category">Custom log category.</param>
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,``0,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,``0,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="category">Custom log category.</param>
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,UnityEngine.Color,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -517,8 +582,9 @@
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="color">Log category color</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.Object,UnityEngine.Color,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.Object,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -526,8 +592,9 @@
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="color">Log category color</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,``0,UnityEngine.Color,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,``0,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -535,8 +602,9 @@
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="color">Log category color</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -544,8 +612,9 @@
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="logOption">Additional log options.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.Object,UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.Object,UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -553,8 +622,9 @@
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="logOption">Additional log options.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,``0,UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,``0,UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -562,89 +632,9 @@
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="logOption">Additional log options.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
-            <summary>
-              <para>Logs a message to the Unity Console.</para>
-            </summary>
-            <param name="category">Custom log category.</param>
-            <param name="message">String or object to be converted to string representation for display.</param>
-            <param name="logOption">Additional log options.</param>
-            <param name="color">Log category color</param>
-            <param name="context">Object to which the message applies.</param>
-        </member>
-        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.Object,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
-            <summary>
-              <para>Logs a message to the Unity Console.</para>
-            </summary>
-            <param name="category">Custom log category.</param>
-            <param name="message">String or object to be converted to string representation for display.</param>
-            <param name="logOption">Additional log options.</param>
-            <param name="color">Log category color</param>
-            <param name="context">Object to which the message applies.</param>
-        </member>
-        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,``0,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
-            <summary>
-              <para>Logs a message to the Unity Console.</para>
-            </summary>
-            <param name="category">Custom log category.</param>
-            <param name="message">String or object to be converted to string representation for display.</param>
-            <param name="logOption">Additional log options.</param>
-            <param name="color">Log category color</param>
-            <param name="context">Object to which the message applies.</param>
-        </member>
-        <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.Color,UnityEngine.Object)">
-            <summary>
-              <para>Logs a message to the Unity Console.</para>
-            </summary>
-            <param name="category">Custom log category.</param>
-            <param name="message">String or object to be converted to string representation for display.</param>
-            <param name="color">Log category color</param>
-            <param name="context">Object to which the message applies.</param>
-        </member>
-        <member name="M:MobX.Debug.Log(System.String,System.Object,UnityEngine.Color,UnityEngine.Object)">
-            <summary>
-              <para>Logs a message to the Unity Console.</para>
-            </summary>
-            <param name="category">Custom log category.</param>
-            <param name="message">String or object to be converted to string representation for display.</param>
-            <param name="color">Log category color</param>
-            <param name="context">Object to which the message applies.</param>
-        </member>
-        <member name="M:MobX.Debug.Log``1(System.String,``0,UnityEngine.Color,UnityEngine.Object)">
-            <summary>
-              <para>Logs a message to the Unity Console.</para>
-            </summary>
-            <param name="category">Custom log category.</param>
-            <param name="message">String or object to be converted to string representation for display.</param>
-            <param name="color">Log category color</param>
-            <param name="context">Object to which the message applies.</param>
-        </member>
-        <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.Object)">
-            <summary>
-              <para>Logs a message to the Unity Console.</para>
-            </summary>
-            <param name="category">Custom log category.</param>
-            <param name="message">String or object to be converted to string representation for display.</param>
-            <param name="context">Object to which the message applies.</param>
-        </member>
-        <member name="M:MobX.Debug.Log(System.String,System.Object,UnityEngine.Object)">
-            <summary>
-              <para>Logs a message to the Unity Console.</para>
-            </summary>
-            <param name="category">Custom log category.</param>
-            <param name="message">String or object to be converted to string representation for display.</param>
-            <param name="context">Object to which the message applies.</param>
-        </member>
-        <member name="M:MobX.Debug.Log``1(System.String,``0,UnityEngine.Object)">
-            <summary>
-              <para>Logs a message to the Unity Console.</para>
-            </summary>
-            <param name="category">Custom log category.</param>
-            <param name="message">String or object to be converted to string representation for display.</param>
-            <param name="context">Object to which the message applies.</param>
-        </member>
-        <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.String,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -653,8 +643,9 @@
             <param name="logOption">Additional log options.</param>
             <param name="color">Log category color</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log(System.String,System.Object,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(MobX.LogCategory,System.Object,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -663,8 +654,9 @@
             <param name="logOption">Additional log options.</param>
             <param name="color">Log category color</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(System.String,``0,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,``0,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -673,8 +665,99 @@
             <param name="logOption">Additional log options.</param>
             <param name="color">Log category color</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,System.Object,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log``1(System.String,``0,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,System.Object,UnityEngine.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log``1(System.String,``0,UnityEngine.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="logOption">Additional log options.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,System.Object,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="logOption">Additional log options.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log``1(System.String,``0,UnityEngine.LogOption,UnityEngine.Color,UnityEngine.Object,MobX.Verbosity)">
+            <summary>
+              <para>Logs a message to the Unity Console.</para>
+            </summary>
+            <param name="category">Custom log category.</param>
+            <param name="message">String or object to be converted to string representation for display.</param>
+            <param name="logOption">Additional log options.</param>
+            <param name="color">Log category color</param>
+            <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
+        </member>
+        <member name="M:MobX.Debug.Log(System.String,System.String,UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -682,8 +765,9 @@
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="logOption">Additional log options.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log(System.String,System.Object,UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log(System.String,System.Object,UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -691,8 +775,9 @@
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="logOption">Additional log options.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(System.String,``0,UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(System.String,``0,UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -700,8 +785,9 @@
             <param name="message">String or object to be converted to string representation for display.</param>
             <param name="logOption">Additional log options.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,System.Collections.Generic.IEnumerable{``0},System.String,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,System.Collections.Generic.IEnumerable{``0},System.String,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -709,16 +795,18 @@
             <param name="enumerable">Enumerable to be converted to string representation for display.</param>
             <param name="separator">String separating enumerable elements</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,System.Collections.Generic.IEnumerable{``0},UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,System.Collections.Generic.IEnumerable{``0},UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="category">Custom log category.</param>
             <param name="enumerable">Enumerable to be converted to string representation for display.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,System.Collections.Generic.IEnumerable{``0},UnityEngine.LogOption,System.String,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,System.Collections.Generic.IEnumerable{``0},UnityEngine.LogOption,System.String,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -727,8 +815,9 @@
             <param name="logOption">Additional log options.</param>
             <param name="separator">String separating enumerable elements</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,System.Collections.Generic.IEnumerable{``0},UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(MobX.LogCategory,System.Collections.Generic.IEnumerable{``0},UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -736,6 +825,7 @@
             <param name="enumerable">Enumerable to be converted to string representation for display.</param>
             <param name="logOption">Additional log options.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
         <member name="M:MobX.Debug.LogWarning``1(MobX.LogCategory,System.Collections.Generic.IEnumerable{``0},System.String,UnityEngine.Object)">
             <summary>
@@ -809,7 +899,7 @@
             <param name="logOption">Additional log options.</param>
             <param name="context">Object to which the message applies.</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(System.String,System.Collections.Generic.IEnumerable{``0},System.String,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(System.String,System.Collections.Generic.IEnumerable{``0},System.String,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -817,16 +907,18 @@
             <param name="enumerable">Enumerable to be converted to string representation for display.</param>
             <param name="separator">String separating enumerable elements</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(System.String,System.Collections.Generic.IEnumerable{``0},UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(System.String,System.Collections.Generic.IEnumerable{``0},UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
             <param name="category">Custom log category.</param>
             <param name="enumerable">Enumerable to be converted to string representation for display.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(System.String,System.Collections.Generic.IEnumerable{``0},UnityEngine.LogOption,System.String,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(System.String,System.Collections.Generic.IEnumerable{``0},UnityEngine.LogOption,System.String,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -835,8 +927,9 @@
             <param name="logOption">Additional log options.</param>
             <param name="separator">String separating enumerable elements</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
-        <member name="M:MobX.Debug.Log``1(System.String,System.Collections.Generic.IEnumerable{``0},UnityEngine.LogOption,UnityEngine.Object)">
+        <member name="M:MobX.Debug.Log``1(System.String,System.Collections.Generic.IEnumerable{``0},UnityEngine.LogOption,UnityEngine.Object,MobX.Verbosity)">
             <summary>
               <para>Logs a message to the Unity Console.</para>
             </summary>
@@ -844,6 +937,7 @@
             <param name="enumerable">Enumerable to be converted to string representation for display.</param>
             <param name="logOption">Additional log options.</param>
             <param name="context">Object to which the message applies.</param>
+            <param name="verbosity">The logging verbosity level</param>
         </member>
         <member name="M:MobX.Debug.LogWarning``1(System.String,System.Collections.Generic.IEnumerable{``0},System.String,UnityEngine.Object)">
             <summary>
@@ -1561,6 +1655,41 @@
         <member name="M:MobX.LogData`1.Deconstruct(MobX.LogCategory@,`0@,System.String@,UnityEngine.LogType@)">
             <summary>
             Deconstructs the data object.
+            </summary>
+        </member>
+        <member name="T:MobX.Verbosity">
+            <summary>
+            Logging Verbosity.
+            </summary>
+        </member>
+        <member name="F:MobX.Verbosity.Verbose">
+            <summary>
+            Verbose logging.
+            </summary>
+        </member>
+        <member name="F:MobX.Verbosity.Message">
+            <summary>
+            Message logging.
+            </summary>
+        </member>
+        <member name="F:MobX.Verbosity.Critical">
+            <summary>
+            Important message logging.
+            </summary>
+        </member>
+        <member name="F:MobX.Verbosity.Warning">
+            <summary>
+            Warnings logging.
+            </summary>
+        </member>
+        <member name="F:MobX.Verbosity.Error">
+            <summary>
+            Error logging.
+            </summary>
+        </member>
+        <member name="F:MobX.Verbosity.Exception">
+            <summary>
+            Exception logging.
             </summary>
         </member>
     </members>

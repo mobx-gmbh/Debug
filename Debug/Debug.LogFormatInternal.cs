@@ -13,8 +13,13 @@ namespace MobX
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void LogFormatInternal(LogType logType, LogOption logOption, string format, object[] args,
-            Object context)
+            Object context, Verbosity verbosity)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(LogCategory.Log, logType))
             {
                 return;
@@ -26,8 +31,13 @@ namespace MobX
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void LogFormatInternal(LogType logType, LogOption logOption, object message, object[] args,
-            Object context)
+            Object context, Verbosity verbosity)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(LogCategory.Log, logType))
             {
                 return;
@@ -40,8 +50,13 @@ namespace MobX
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void LogFormatInternal<T>(LogType logType, LogOption logOption, T message, object[] args,
-            Object context)
+            Object context, Verbosity verbosity)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(LogCategory.Log, logType))
             {
                 return;
@@ -56,8 +71,13 @@ namespace MobX
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void LogFormatInternal(LogCategory category, LogType logType, LogOption logOption,
-            string message, object[] args, Object context)
+            string message, object[] args, Object context, Verbosity verbosity)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category, logType))
             {
                 return;
@@ -70,8 +90,13 @@ namespace MobX
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void LogFormatInternal(LogCategory category, LogType logType, LogOption logOption,
-            object message, object[] args, Object context)
+            object message, object[] args, Object context, Verbosity verbosity)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category, logType))
             {
                 return;
@@ -84,8 +109,13 @@ namespace MobX
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void LogFormatInternal<T>(LogCategory category, LogType logType, LogOption logOption, T message,
-            object[] args, Object context) where T : struct
+            object[] args, Object context, Verbosity verbosity) where T : struct
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category, logType))
             {
                 return;
@@ -100,8 +130,13 @@ namespace MobX
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void LogFormatInternal<T>(LogType logType, LogOption logOption, IEnumerable<T> enumerable,
-            string separator, Object context)
+            string separator, Object context, Verbosity verbosity)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(LogCategory.Log, logType))
             {
                 return;
@@ -125,8 +160,13 @@ namespace MobX
         [DebuggerHidden]
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void LogFormatInternal<T>(LogCategory category, LogType logType, LogOption logOption,
-            IEnumerable<T> enumerable, string separator, Object context)
+            IEnumerable<T> enumerable, string separator, Object context, Verbosity verbosity)
         {
+            if (verbosity < Verbosity)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category, logType))
             {
                 return;

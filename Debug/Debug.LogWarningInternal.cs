@@ -10,6 +10,11 @@ namespace MobX
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void LogWarningInternal(string message, Object context)
         {
+            if (Verbosity > Verbosity.Warning)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(LogCategory.Log, LogType.Warning))
             {
                 return;
@@ -22,6 +27,11 @@ namespace MobX
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void LogWarningInternal(LogCategory category, string message, Object context)
         {
+            if (Verbosity > Verbosity.Warning)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category, LogType.Warning))
             {
                 return;
@@ -34,6 +44,11 @@ namespace MobX
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void LogWarningInternal(LogCategory category, object message, Object context)
         {
+            if (Verbosity > Verbosity.Warning)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category, LogType.Warning))
             {
                 return;
@@ -48,6 +63,11 @@ namespace MobX
         private static void LogWarningInternal<T>(LogCategory category, T message, Object context)
             where T : struct
         {
+            if (Verbosity > Verbosity.Warning)
+            {
+                return;
+            }
+
             if (IsLogCategoryBlocked(category, LogType.Warning))
             {
                 return;

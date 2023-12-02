@@ -59,7 +59,7 @@ namespace MobX
         [Conditional("DEBUG")]
         public static void LogWarning(string message, LogOption logOption, Object context = null)
         {
-            LogFormatInternal(LogType.Warning, logOption, message, null, context);
+            LogFormatInternal(LogType.Warning, logOption, message, null, context, Verbosity.Warning);
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace MobX
         [Conditional("DEBUG")]
         public static void LogWarning(object message, LogOption logOption, Object context = null)
         {
-            LogFormatInternal(LogType.Warning, logOption, message, null, context);
+            LogFormatInternal(LogType.Warning, logOption, message, null, context, Verbosity.Warning);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace MobX
         [Conditional("DEBUG")]
         public static void LogWarning<T>(T message, LogOption logOption, Object context = null) where T : struct
         {
-            LogFormatInternal(LogType.Warning, logOption, message, null, context);
+            LogFormatInternal(LogType.Warning, logOption, message, null, context, Verbosity.Warning);
         }
 
         //--------------------------------------------------------------------------------------------------------------
@@ -103,7 +103,7 @@ namespace MobX
         [Conditional("DEBUG")]
         public static void LogWarning<T>(IEnumerable<T> enumerable, string separator = Separator, Object context = null)
         {
-            LogFormatInternal(LogType.Warning, LogOption.None, enumerable, separator, context);
+            LogFormatInternal(LogType.Warning, LogOption.None, enumerable, separator, context, Verbosity.Warning);
         }
 
         /// <summary>
@@ -116,7 +116,7 @@ namespace MobX
         [Conditional("DEBUG")]
         public static void LogWarning<T>(IEnumerable<T> enumerable, Object context)
         {
-            LogFormatInternal(LogType.Warning, LogOption.None, enumerable, Separator, context);
+            LogFormatInternal(LogType.Warning, LogOption.None, enumerable, Separator, context, Verbosity.Warning);
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace MobX
         public static void LogWarning<T>(IEnumerable<T> enumerable, LogOption logOption, string separator = Separator,
             Object context = null)
         {
-            LogFormatInternal(LogType.Warning, logOption, enumerable, separator, context);
+            LogFormatInternal(LogType.Warning, logOption, enumerable, separator, context, Verbosity.Warning);
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace MobX
         [Conditional("DEBUG")]
         public static void LogWarning<T>(IEnumerable<T> enumerable, LogOption logOption, Object context)
         {
-            LogFormatInternal(LogType.Warning, logOption, enumerable, Separator, context);
+            LogFormatInternal(LogType.Warning, logOption, enumerable, Separator, context, Verbosity.Warning);
         }
 
         //------------------------------------------------------------------------------------------------------------------
@@ -161,7 +161,7 @@ namespace MobX
         [Conditional("DEBUG")]
         public static void LogWarningFormat(string format, params object[] args)
         {
-            LogFormatInternal(LogType.Warning, LogOption.None, format, args, null);
+            LogFormatInternal(LogType.Warning, LogOption.None, format, args, null, Verbosity.Warning);
         }
 
         /// <summary>
@@ -175,7 +175,7 @@ namespace MobX
         [Conditional("DEBUG")]
         public static void LogWarningFormat(Object context, string format, params object[] args)
         {
-            LogFormatInternal(LogType.Warning, LogOption.None, format, args, context);
+            LogFormatInternal(LogType.Warning, LogOption.None, format, args, context, Verbosity.Warning);
         }
     }
 }

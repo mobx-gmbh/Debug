@@ -77,6 +77,11 @@ namespace MobX
         public static bool isDebugBuild => UnityEngine.Debug.isDebugBuild;
 
         /// <summary>
+        /// Set the logging verbosity to reduce logging clutter.
+        /// </summary>
+        public static Verbosity Verbosity { get; set; } = Verbosity.Verbose;
+
+        /// <summary>
         /// Static ctor
         /// </summary>
         static Debug()

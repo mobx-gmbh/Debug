@@ -63,9 +63,9 @@ namespace MobX
         /// <param name="logOption"></param>
         /// <param name="context"></param>
         /// <param name="line"></param>
-        public static void LogLine(LogOption logOption, Object context = null, [CallerLineNumber] int line = default)
+        public static void LogLine(LogOption logOption, Object context = null, [CallerLineNumber] int line = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(LogCategory.Log, LogType.Log, logOption, $"{LinePrefix}{line.ToString()}", null, context);
+            LogFormatInternal(LogCategory.Log, LogType.Log, logOption, $"{LinePrefix}{line.ToString()}", null, context, verbosity);
         }
 
         /// <summary>
@@ -73,32 +73,9 @@ namespace MobX
         /// </summary>
         /// <param name="context"></param>
         /// <param name="line"></param>
-        public static void LogLine(Object context = null, [CallerLineNumber] int line = default)
+        public static void LogLine(Object context = null, [CallerLineNumber] int line = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(LogCategory.Log, LogType.Log, LogOption.None, $"{LinePrefix}{line.ToString()}", null, context);
-        }
-
-        /// <summary>
-        /// The current line number at compile time.
-        /// </summary>
-        /// <param name="category"></param>
-        /// <param name="logOption"></param>
-        /// <param name="context"></param>
-        /// <param name="line"></param>
-        public static void LogLine(LogCategory category, LogOption logOption, Object context = null, [CallerLineNumber] int line = default)
-        {
-            LogFormatInternal(category, LogType.Log, logOption, $"{LinePrefix}{line.ToString()}", null, context);
-        }
-
-        /// <summary>
-        /// The current line number at compile time.
-        /// </summary>
-        /// <param name="category"></param>
-        /// <param name="context"></param>
-        /// <param name="line"></param>
-        public static void LogLine(LogCategory category, Object context = null, [CallerLineNumber] int line = default)
-        {
-            LogFormatInternal(category, LogType.Log, LogOption.None, $"{LinePrefix}{line.ToString()}", null, context);
+            LogFormatInternal(LogCategory.Log, LogType.Log, LogOption.None, $"{LinePrefix}{line.ToString()}", null, context, verbosity);
         }
 
         /// <summary>
@@ -108,9 +85,9 @@ namespace MobX
         /// <param name="logOption"></param>
         /// <param name="context"></param>
         /// <param name="line"></param>
-        public static void LogLine(string category, LogOption logOption, Object context = null, [CallerLineNumber] int line = default)
+        public static void LogLine(LogCategory category, LogOption logOption, Object context = null, [CallerLineNumber] int line = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(category, LogType.Log, logOption, $"{LinePrefix}{line.ToString()}", null, context);
+            LogFormatInternal(category, LogType.Log, logOption, $"{LinePrefix}{line.ToString()}", null, context, verbosity);
         }
 
         /// <summary>
@@ -119,9 +96,32 @@ namespace MobX
         /// <param name="category"></param>
         /// <param name="context"></param>
         /// <param name="line"></param>
-        public static void LogLine(string category, Object context = null, [CallerLineNumber] int line = default)
+        public static void LogLine(LogCategory category, Object context = null, [CallerLineNumber] int line = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(category, LogType.Log, LogOption.None, $"{LinePrefix}{line.ToString()}", null, context);
+            LogFormatInternal(category, LogType.Log, LogOption.None, $"{LinePrefix}{line.ToString()}", null, context, verbosity);
+        }
+
+        /// <summary>
+        /// The current line number at compile time.
+        /// </summary>
+        /// <param name="category"></param>
+        /// <param name="logOption"></param>
+        /// <param name="context"></param>
+        /// <param name="line"></param>
+        public static void LogLine(string category, LogOption logOption, Object context = null, [CallerLineNumber] int line = default, Verbosity verbosity = Verbosity.Verbose)
+        {
+            LogFormatInternal(category, LogType.Log, logOption, $"{LinePrefix}{line.ToString()}", null, context, verbosity);
+        }
+
+        /// <summary>
+        /// The current line number at compile time.
+        /// </summary>
+        /// <param name="category"></param>
+        /// <param name="context"></param>
+        /// <param name="line"></param>
+        public static void LogLine(string category, Object context = null, [CallerLineNumber] int line = default, Verbosity verbosity = Verbosity.Verbose)
+        {
+            LogFormatInternal(category, LogType.Log, LogOption.None, $"{LinePrefix}{line.ToString()}", null, context, verbosity);
         }
 
         #endregion
@@ -140,9 +140,9 @@ namespace MobX
         /// <param name="logOption"></param>
         /// <param name="context"></param>
         /// <param name="member"></param>
-        public static void LogMember(LogOption logOption, Object context = null, [CallerMemberName] string member = default)
+        public static void LogMember(LogOption logOption, Object context = null, [CallerMemberName] string member = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(LogCategory.Log, LogType.Log, logOption, $"{MemberPrefix}{member}", null, context);
+            LogFormatInternal(LogCategory.Log, LogType.Log, logOption, $"{MemberPrefix}{member}", null, context, verbosity);
         }
 
         /// <summary>
@@ -150,32 +150,9 @@ namespace MobX
         /// </summary>
         /// <param name="context"></param>
         /// <param name="member"></param>
-        public static void LogMember(Object context = null, [CallerMemberName] string member = default)
+        public static void LogMember(Object context = null, [CallerMemberName] string member = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(LogCategory.Log, LogType.Log, LogOption.None, $"{MemberPrefix}{member}", null, context);
-        }
-
-        /// <summary>
-        /// Log the callers member name at compile time.
-        /// </summary>
-        /// <param name="category"></param>
-        /// <param name="logOption"></param>
-        /// <param name="context"></param>
-        /// <param name="member"></param>
-        public static void LogMember(LogCategory category, LogOption logOption, Object context = null, [CallerMemberName] string member = default)
-        {
-            LogFormatInternal(category, LogType.Log, logOption, $"{MemberPrefix}{member}", null, context);
-        }
-
-        /// <summary>
-        /// Log the callers member name at compile time.
-        /// </summary>
-        /// <param name="category"></param>
-        /// <param name="context"></param>
-        /// <param name="member"></param>
-        public static void LogMember(LogCategory category, Object context = null, [CallerMemberName] string member = default)
-        {
-            LogFormatInternal(category, LogType.Log, LogOption.None, $"{MemberPrefix}{member}", null, context);
+            LogFormatInternal(LogCategory.Log, LogType.Log, LogOption.None, $"{MemberPrefix}{member}", null, context, verbosity);
         }
 
         /// <summary>
@@ -185,9 +162,9 @@ namespace MobX
         /// <param name="logOption"></param>
         /// <param name="context"></param>
         /// <param name="member"></param>
-        public static void LogMember(string category, LogOption logOption, Object context = null, [CallerMemberName] string member = default)
+        public static void LogMember(LogCategory category, LogOption logOption, Object context = null, [CallerMemberName] string member = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(category, LogType.Log, logOption, $"{MemberPrefix}{member}", null, context);
+            LogFormatInternal(category, LogType.Log, logOption, $"{MemberPrefix}{member}", null, context, verbosity);
         }
 
         /// <summary>
@@ -196,9 +173,32 @@ namespace MobX
         /// <param name="category"></param>
         /// <param name="context"></param>
         /// <param name="member"></param>
-        public static void LogMember(string category, Object context = null, [CallerMemberName] string member = default)
+        public static void LogMember(LogCategory category, Object context = null, [CallerMemberName] string member = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(category, LogType.Log, LogOption.None, $"{MemberPrefix}{member}", null, context);
+            LogFormatInternal(category, LogType.Log, LogOption.None, $"{MemberPrefix}{member}", null, context, verbosity);
+        }
+
+        /// <summary>
+        /// Log the callers member name at compile time.
+        /// </summary>
+        /// <param name="category"></param>
+        /// <param name="logOption"></param>
+        /// <param name="context"></param>
+        /// <param name="member"></param>
+        public static void LogMember(string category, LogOption logOption, Object context = null, [CallerMemberName] string member = default, Verbosity verbosity = Verbosity.Verbose)
+        {
+            LogFormatInternal(category, LogType.Log, logOption, $"{MemberPrefix}{member}", null, context, verbosity);
+        }
+
+        /// <summary>
+        /// Log the callers member name at compile time.
+        /// </summary>
+        /// <param name="category"></param>
+        /// <param name="context"></param>
+        /// <param name="member"></param>
+        public static void LogMember(string category, Object context = null, [CallerMemberName] string member = default, Verbosity verbosity = Verbosity.Verbose)
+        {
+            LogFormatInternal(category, LogType.Log, LogOption.None, $"{MemberPrefix}{member}", null, context, verbosity);
         }
 
         #endregion
@@ -217,9 +217,9 @@ namespace MobX
         /// <param name="logOption"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
-        public static void LogFile(LogOption logOption, Object context = null, [CallerFilePath] string path = default)
+        public static void LogFile(LogOption logOption, Object context = null, [CallerFilePath] string path = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(LogCategory.Log, LogType.Log, logOption, $"{FilePrefix}{path}", null, context);
+            LogFormatInternal(LogCategory.Log, LogType.Log, logOption, $"{FilePrefix}{path}", null, context, verbosity);
         }
 
         /// <summary>
@@ -227,32 +227,9 @@ namespace MobX
         /// </summary>
         /// <param name="context"></param>
         /// <param name="path"></param>
-        public static void LogFile(Object context = null, [CallerFilePath] string path = default)
+        public static void LogFile(Object context = null, [CallerFilePath] string path = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(LogCategory.Log, LogType.Log, LogOption.None, $"{FilePrefix}{path}", null, context);
-        }
-
-        /// <summary>
-        /// Log the callers file path name captured at compile time.
-        /// </summary>
-        /// <param name="category"></param>
-        /// <param name="logOption"></param>
-        /// <param name="context"></param>
-        /// <param name="path"></param>
-        public static void LogFile(LogCategory category, LogOption logOption, Object context = null, [CallerFilePath] string path = default)
-        {
-            LogFormatInternal(category, LogType.Log, logOption, $"{FilePrefix}{path}", null, context);
-        }
-
-        /// <summary>
-        /// Log the callers file path name captured at compile time.
-        /// </summary>
-        /// <param name="category"></param>
-        /// <param name="context"></param>
-        /// <param name="path"></param>
-        public static void LogFile(LogCategory category, Object context = null, [CallerFilePath] string path = default)
-        {
-            LogFormatInternal(category, LogType.Log, LogOption.None, $"{FilePrefix}{path}", null, context);
+            LogFormatInternal(LogCategory.Log, LogType.Log, LogOption.None, $"{FilePrefix}{path}", null, context, verbosity);
         }
 
         /// <summary>
@@ -262,9 +239,9 @@ namespace MobX
         /// <param name="logOption"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
-        public static void LogFile(string category, LogOption logOption, Object context = null, [CallerFilePath] string path = default)
+        public static void LogFile(LogCategory category, LogOption logOption, Object context = null, [CallerFilePath] string path = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(category, LogType.Log, logOption, $"{FilePrefix}{path}", null, context);
+            LogFormatInternal(category, LogType.Log, logOption, $"{FilePrefix}{path}", null, context, verbosity);
         }
 
         /// <summary>
@@ -273,9 +250,32 @@ namespace MobX
         /// <param name="category"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
-        public static void LogFile(string category, Object context = null, [CallerFilePath] string path = default)
+        public static void LogFile(LogCategory category, Object context = null, [CallerFilePath] string path = default, Verbosity verbosity = Verbosity.Verbose)
         {
-            LogFormatInternal(category, LogType.Log, LogOption.None, $"{FilePrefix}{path}", null, context);
+            LogFormatInternal(category, LogType.Log, LogOption.None, $"{FilePrefix}{path}", null, context, verbosity);
+        }
+
+        /// <summary>
+        /// Log the callers file path name captured at compile time.
+        /// </summary>
+        /// <param name="category"></param>
+        /// <param name="logOption"></param>
+        /// <param name="context"></param>
+        /// <param name="path"></param>
+        public static void LogFile(string category, LogOption logOption, Object context = null, [CallerFilePath] string path = default, Verbosity verbosity = Verbosity.Verbose)
+        {
+            LogFormatInternal(category, LogType.Log, logOption, $"{FilePrefix}{path}", null, context, verbosity);
+        }
+
+        /// <summary>
+        /// Log the callers file path name captured at compile time.
+        /// </summary>
+        /// <param name="category"></param>
+        /// <param name="context"></param>
+        /// <param name="path"></param>
+        public static void LogFile(string category, Object context = null, [CallerFilePath] string path = default, Verbosity verbosity = Verbosity.Verbose)
+        {
+            LogFormatInternal(category, LogType.Log, LogOption.None, $"{FilePrefix}{path}", null, context, verbosity);
         }
 
         #endregion
