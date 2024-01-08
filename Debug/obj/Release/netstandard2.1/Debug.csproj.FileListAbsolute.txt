@@ -12,3 +12,4 @@ D:\MobX\Debug\Debug\obj\Release\netstandard2.1\Debug.csproj.CoreCompileInputs.ca
 D:\MobX\Debug\Debug\obj\Release\netstandard2.1\Debug.csproj.CopyComplete
 D:\MobX\Debug\Debug\obj\Release\netstandard2.1\com.mobx.debug.dll
 D:\MobX\Debug\Debug\obj\Release\netstandard2.1\com.mobx.debug.pdb
+D:\MobX\Debug\Debug\obj\Release\netstandard2.1\Debug.sourcelink.json

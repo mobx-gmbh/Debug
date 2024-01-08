@@ -41,6 +41,24 @@ namespace MobX
             };
 
         /// <summary>
+        /// Get disabled log categories.
+        /// </summary>
+        [PublicAPI]
+        public static IReadOnlyCollection<LogCategory> BlockedLogCategories(LogType logType = LogType.Log)
+        {
+            return blockedLogCategories[logType];
+        }
+
+        /// <summary>
+        /// Get enabled log categories.
+        /// </summary>
+        [PublicAPI]
+        public static IReadOnlyCollection<LogCategory> UnblockedLogCategories(LogType logType = LogType.Log)
+        {
+            return unblockedLogCategories[logType];
+        }
+
+        /// <summary>
         /// Reset enabled and disabled log categories.
         /// </summary>
         [PublicAPI]

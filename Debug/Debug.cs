@@ -79,7 +79,16 @@ namespace MobX
         /// <summary>
         /// Set the logging verbosity to reduce logging clutter.
         /// </summary>
+        [PublicAPI]
+        [DebuggerHidden]
         public static Verbosity Verbosity { get; set; } = Verbosity.Verbose;
+
+        /// <summary>
+        /// Toggle color coding for categories. Can be disabled for release builds to prevent rich text color in logs.
+        /// </summary>
+        [PublicAPI]
+        [DebuggerHidden]
+        public static bool EnableColorCoding { get; set; } = true;
 
         /// <summary>
         /// Static ctor

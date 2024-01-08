@@ -131,9 +131,10 @@ namespace MobX
             }
 
             UnityEngine.Debug.Log(
-                Application.isEditor
+                message: EnableColorCoding
                     ? CreateLogCategoryMessageNoAlloc(category, message, color)
-                    : CreateLogCategoryMessageNoAlloc(category, message), context);
+                    : CreateLogCategoryMessageNoAlloc(category, message),
+                context: context);
         }
 
         [DebuggerHidden]

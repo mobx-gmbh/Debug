@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = MobX
 build_property.ProjectDir = D:\MobX\Debug\Debug\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

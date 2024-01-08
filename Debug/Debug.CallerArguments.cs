@@ -239,6 +239,7 @@ namespace MobX
         /// <param name="logOption"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
+        /// <param name="verbosity"></param>
         public static void LogFile(LogCategory category, LogOption logOption, Object context = null, [CallerFilePath] string path = default, Verbosity verbosity = Verbosity.Verbose)
         {
             LogFormatInternal(category, LogType.Log, logOption, $"{FilePrefix}{path}", null, context, verbosity);
@@ -250,6 +251,7 @@ namespace MobX
         /// <param name="category"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
+        /// <param name="verbosity"></param>
         public static void LogFile(LogCategory category, Object context = null, [CallerFilePath] string path = default, Verbosity verbosity = Verbosity.Verbose)
         {
             LogFormatInternal(category, LogType.Log, LogOption.None, $"{FilePrefix}{path}", null, context, verbosity);
@@ -262,6 +264,7 @@ namespace MobX
         /// <param name="logOption"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
+        /// <param name="verbosity"></param>
         public static void LogFile(string category, LogOption logOption, Object context = null, [CallerFilePath] string path = default, Verbosity verbosity = Verbosity.Verbose)
         {
             LogFormatInternal(category, LogType.Log, logOption, $"{FilePrefix}{path}", null, context, verbosity);
@@ -273,6 +276,7 @@ namespace MobX
         /// <param name="category"></param>
         /// <param name="context"></param>
         /// <param name="path"></param>
+        /// <param name="verbosity"></param>
         public static void LogFile(string category, Object context = null, [CallerFilePath] string path = default, Verbosity verbosity = Verbosity.Verbose)
         {
             LogFormatInternal(category, LogType.Log, LogOption.None, $"{FilePrefix}{path}", null, context, verbosity);

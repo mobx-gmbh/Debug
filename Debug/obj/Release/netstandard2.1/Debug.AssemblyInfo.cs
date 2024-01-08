@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("com.mobx.debug")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e379e675b52766095a001e136600c982d0a89720")]
 [assembly: System.Reflection.AssemblyProductAttribute("com.mobx.debug")]
 [assembly: System.Reflection.AssemblyTitleAttribute("com.mobx.debug")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

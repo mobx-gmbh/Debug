@@ -246,6 +246,7 @@
             <param name="logOption"></param>
             <param name="context"></param>
             <param name="path"></param>
+            <param name="verbosity"></param>
         </member>
         <member name="M:MobX.Debug.LogFile(MobX.LogCategory,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
@@ -254,6 +255,7 @@
             <param name="category"></param>
             <param name="context"></param>
             <param name="path"></param>
+            <param name="verbosity"></param>
         </member>
         <member name="M:MobX.Debug.LogFile(System.String,UnityEngine.LogOption,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
@@ -263,6 +265,7 @@
             <param name="logOption"></param>
             <param name="context"></param>
             <param name="path"></param>
+            <param name="verbosity"></param>
         </member>
         <member name="M:MobX.Debug.LogFile(System.String,UnityEngine.Object,System.String,MobX.Verbosity)">
             <summary>
@@ -271,6 +274,7 @@
             <param name="category"></param>
             <param name="context"></param>
             <param name="path"></param>
+            <param name="verbosity"></param>
         </member>
         <member name="P:MobX.Debug.unityLogger">
             <summary>
@@ -313,6 +317,11 @@
         <member name="P:MobX.Debug.Verbosity">
             <summary>
             Set the logging verbosity to reduce logging clutter.
+            </summary>
+        </member>
+        <member name="P:MobX.Debug.EnableColorCoding">
+            <summary>
+            Toggle color coding for categories. Can be disabled for release builds to prevent rich text color in logs.
             </summary>
         </member>
         <member name="M:MobX.Debug.#cctor">
@@ -1422,6 +1431,16 @@
         <member name="F:MobX.Debug.Separator">
             <summary>
             Default collection item separation character.
+            </summary>
+        </member>
+        <member name="M:MobX.Debug.BlockedLogCategories(UnityEngine.LogType)">
+            <summary>
+            Get disabled log categories.
+            </summary>
+        </member>
+        <member name="M:MobX.Debug.UnblockedLogCategories(UnityEngine.LogType)">
+            <summary>
+            Get enabled log categories.
             </summary>
         </member>
         <member name="M:MobX.Debug.ResetLogCategories">
